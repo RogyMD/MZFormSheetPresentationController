@@ -48,7 +48,7 @@
     // MZFormSheetPresentationViewController using UIModalPresentationFullScreen style !!!
     // Made this workaround to have less github issues, for people who is not reading docs :)
 
-    if (self.viewController.presentedViewController && self.viewController.presentedViewController.modalPresentationStyle == UIModalPresentationFullScreen) {
+    if (self.viewController.presentedViewController && self.viewController.presentedViewController.isBeingDismissed) {
         return;
     }
     [super setFrame:frame];
